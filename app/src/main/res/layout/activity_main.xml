@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_insert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Insert"
+        android:layout_marginTop="10dp"
+        tools:ignore="HardcodedText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view"/>
+
+    <Button
+        android:id="@+id/btn_load"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Load Last"
+        android:layout_marginTop="5dp"
+        tools:ignore="HardcodedText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_insert"/>
+
+    <Button
+        android:id="@+id/btn_camera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start CameraX Activity"
+        android:layout_marginTop="20dp"
+        tools:ignore="HardcodedText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_load"/>
+
+    <Button
+        android:id="@+id/btn_notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Notification Activity"
+        android:layout_marginTop="20dp"
+        tools:ignore="HardcodedText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_camera"/>
+
+    <Button
+        android:id="@+id/btn_animator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Animator Activity"
+        android:layout_marginTop="20dp"
+        tools:ignore="HardcodedText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_notification"/>
+
+    <Button
+        android:id="@+id/btn_motion_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start MotionLayout Activity"
+        android:layout_marginTop="20dp"
+        tools:ignore="HardcodedText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_animator"/>
+
+    <Button
+        android:id="@+id/btn_palette"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Palette Activity"
+        android:layout_marginTop="20dp"
+        tools:ignore="HardcodedText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_motion_layout"/>
+
+    <Button
+        android:id="@+id/btn_retrofit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Retrofit Coroutines Activity"
+        android:layout_marginTop="20dp"
+        tools:ignore="HardcodedText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_palette"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

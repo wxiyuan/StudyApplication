@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:animateLayoutChanges="true"
+    tools:context=".AnimatorActivity">
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:focusable="true"
+        android:clickable="true"
+        android:background="@drawable/animator_vector_drawable"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/image_change"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/ic_launcher_round_111"
+        android:transitionName="share_image"
+        app:layout_constraintLeft_toRightOf="@id/image_view"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <Button
+        android:id="@+id/btn_vector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vector drawable animation"
+        android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_change"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btn_customized_path"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Customized path"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_vector"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btn_fling"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fling"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_customized_path"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btn_spring"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Spring"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_fling"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btn_change"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Change layout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_spring"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btn_share_ui"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start share ui activity"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_change"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btn_soft_spring"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Soft Spring"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_share_ui"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

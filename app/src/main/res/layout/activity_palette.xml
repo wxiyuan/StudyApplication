@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".PaletteActivity">
+
+    <ImageView
+        android:id="@+id/image_palette"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/image_palette"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/text_vibrant"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:padding="8dp"
+        android:gravity="center"
+        android:background="@android:color/white"
+        android:text="Vibrant"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/text_light_vibrant"
+        app:layout_constraintTop_toBottomOf="@+id/image_palette"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/text_light_vibrant"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:padding="8dp"
+        android:gravity="center"
+        android:background="@android:color/white"
+        android:text="Light Vibrant"
+        app:layout_constraintLeft_toRightOf="@+id/text_vibrant"
+        app:layout_constraintRight_toLeftOf="@id/text_dark_vibrant"
+        app:layout_constraintTop_toBottomOf="@+id/image_palette"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/text_dark_vibrant"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:padding="8dp"
+        android:gravity="center"
+        android:background="@android:color/white"
+        android:text="Dark Vibrant"
+        app:layout_constraintLeft_toRightOf="@+id/text_light_vibrant"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_palette"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/text_muted"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="8dp"
+        android:gravity="center"
+        android:background="@android:color/white"
+        android:text="Muted"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/text_light_muted"
+        app:layout_constraintTop_toBottomOf="@+id/text_vibrant"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/text_light_muted"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="8dp"
+        android:gravity="center"
+        android:background="@android:color/white"
+        android:text="Light Muted"
+        app:layout_constraintLeft_toRightOf="@+id/text_muted"
+        app:layout_constraintRight_toLeftOf="@id/text_dark_muted"
+        app:layout_constraintTop_toBottomOf="@+id/text_light_vibrant"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/text_dark_muted"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="8dp"
+        android:gravity="center"
+        android:background="@android:color/white"
+        android:text="Dark Muted"
+        app:layout_constraintLeft_toRightOf="@+id/text_light_muted"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_dark_vibrant"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/text_dominant"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="8dp"
+        android:gravity="center"
+        android:background="@android:color/white"
+        android:text="Dominant"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_muted"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
