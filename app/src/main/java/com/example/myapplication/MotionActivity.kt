@@ -18,6 +18,7 @@ class MotionActivity : AppCompatActivity() {
         btn_motion_02.setOnClickListener(onClickListener)
         btn_motion_03.setOnClickListener(onClickListener)
         btn_motion_04.setOnClickListener(onClickListener)
+        btn_motion_05.setOnClickListener(onClickListener)
     }
 
     private fun onClick(view : View) {
@@ -26,6 +27,7 @@ class MotionActivity : AppCompatActivity() {
             R.id.btn_motion_02 -> startMotionLayoutActivity(R.layout.motion_02)
             R.id.btn_motion_03 -> startMotionLayoutActivity(R.layout.motion_03)
             R.id.btn_motion_04 -> startMotionLayoutActivity(R.layout.motion_04)
+            R.id.btn_motion_05 -> startMotionLayoutActivity(R.layout.motion_05)
             else -> {}
         }
     }
