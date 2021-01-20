@@ -1,13 +1,21 @@
 package com.example.myapplication
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import androidx.lifecycle.lifecycleScope
 import androidx.room.Room
 import com.example.myapplication.databinding.ActivityMainBinding
 import com.example.myapplication.room.UserDatabase
 import com.example.myapplication.room.UserEntity
+import io.reactivex.Observable
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.Disposable
 import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.delay
+import java.util.concurrent.TimeUnit
 
 @ExperimentalCoroutinesApi
 class MainActivity : AppCompatActivity() {
@@ -16,6 +24,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var userDatabase: UserDatabase
 
     private var insertTestIndex = 0
+    private var timerDisposable: Disposable? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +33,12 @@ class MainActivity : AppCompatActivity() {
         init()
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        timerDisposable?.dispose()
+    }
+
+    @SuppressLint("SetTextI18n")
     private fun init() {
         userDatabase = Room.inMemoryDatabaseBuilder(
             applicationContext,
@@ -42,6 +57,24 @@ class MainActivity : AppCompatActivity() {
             btnPalette.setOnClickListener { startPaletteActivity() }
             btnMotionLayout.setOnClickListener { startMotionLayoutActivity() }
             btnRetrofit.setOnClickListener { startRetrofitActivity() }
+        }
+
+        val timerObservable = Observable.intervalRange(0, 5 + 1, 0, 1, TimeUnit.SECONDS)
+            .observeOn(AndroidSchedulers.mainThread())
+            .doOnNext { count ->
+                binding.textView.text = "${5 - count}"
+            }
+            .doOnComplete {
+                binding.textView.text = "finish"
+            }
+
+        lifecycleScope.launchWhenResumed {
+            delay(3000)
+            timerDisposable = timerObservable.subscribe()
+            delay(2000)
+            timerDisposable?.dispose()
+            delay(2000)
+            timerDisposable = timerObservable.subscribe()
         }
     }
 
