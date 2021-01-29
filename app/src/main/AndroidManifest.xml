@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning">
+        tools:ignore="GoogleAppIndexingWarning,UnusedAttribute">
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -56,6 +56,10 @@
         <activity
             android:name=".RetrofitActivity"
             android:label="Retrofit Coroutines"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".EventDeliveryActivity"
+            android:label="Event Delivery"
             android:parentActivityName=".MainActivity"/>
     </application>
 

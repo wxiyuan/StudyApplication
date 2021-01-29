@@ -105,4 +105,15 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_palette"/>
 
+    <Button
+        android:id="@+id/btn_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Delivery Event Activity"
+        android:layout_marginTop="20dp"
+        tools:ignore="HardcodedText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_retrofit"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

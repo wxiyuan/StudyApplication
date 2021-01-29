@@ -56,6 +56,7 @@ class MainActivity : AppCompatActivity() {
             btnPalette.setOnClickListener { startPaletteActivity() }
             btnMotionLayout.setOnClickListener { startMotionLayoutActivity() }
             btnRetrofit.setOnClickListener { startRetrofitActivity() }
+            btnEvent.setOnClickListener { startEventActivity() }
         }
 
         val timerObservable = Observable.intervalRange(0, 5 + 1, 0, 1, TimeUnit.SECONDS)
@@ -117,5 +118,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun startRetrofitActivity() {
         startActivity(Intent(this, RetrofitActivity::class.java))
+    }
+
+    private fun startEventActivity() {
+        startActivity(Intent(this, EventDeliveryActivity::class.java))
     }
 }
